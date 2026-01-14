@@ -1,0 +1,48 @@
+/* Custom Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.course-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.alert {
+    border-radius: 0.5rem;
+}
+
+.form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.btn {
+    border-radius: 0.5rem;
+}
+
+.table-responsive {
+    border-radius: 0.5rem;
+}
+

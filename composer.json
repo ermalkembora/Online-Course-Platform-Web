@@ -1,0 +1,13 @@
+{
+    "name": "elearning-platform/composer",
+    "description": "E-Learning Platform - PHP + MySQL",
+    "require": {
+        "stripe/stripe-php": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
+

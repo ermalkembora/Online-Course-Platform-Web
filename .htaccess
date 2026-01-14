@@ -1,0 +1,24 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Set base URL to project root
+RewriteBase /e-learning-platform/
+
+# If request is for a file or directory that exists, serve it
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Route everything to public/index.php (URL won't show /public/)
+RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(config\.php|database\.php|composer\.(json|lock)|\.env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Set default charset
+AddDefaultCharset UTF-8

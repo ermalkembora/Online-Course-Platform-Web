@@ -1,0 +1,22 @@
+# Composer
+/vendor/
+composer.lock
+
+# Uploads
+/uploads/*
+!/uploads/.gitkeep
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config (if you want to keep secrets out)
+# config/config.php
+

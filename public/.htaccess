@@ -1,0 +1,22 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Set base URL (adjust if your installation is in a subdirectory)
+RewriteBase /e-learning-platform/public/
+
+# If request is for a file or directory that exists, serve it
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Route everything else to index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(\.htaccess|\.env|composer\.(json|lock))$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
